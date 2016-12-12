@@ -8,7 +8,7 @@
 
 namespace customElixir;
 
-public class customElixir {
+class customElixir {
 
     /**
      * Get the path to a teja versioned Elixir file.
@@ -20,9 +20,8 @@ public class customElixir {
      * @throws \InvalidArgumentException
      */
 
-    public function teja_elixir($file, $host = '')
+    public static function teja_elixir($file, $host = '')
     {
-
         if (env('APP_ENV') == 'local' || env('APP_ENV') == 'staging') {
             $in_host = "";
         } else {
@@ -31,5 +30,4 @@ public class customElixir {
 
         return $in_host . elixir($file);
     }
-
 }
