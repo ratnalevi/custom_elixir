@@ -8,25 +8,28 @@
 
 namespace customElixir;
 
-if(! function_exists('teja_elixir') ){
+public class customElixir {
 
     /**
      * Get the path to a teja versioned Elixir file.
      *
-     * @param  string  $file
-     * @param  string  $host
+     * @param  string $file
+     * @param  string $host
      * @return string
      *
      * @throws \InvalidArgumentException
      */
-    function teja_elixir( $file, $host = '' ){
 
-        if( env('APP_ENV') == 'local' || env('APP_ENV') == 'staging'  ){
+    public function teja_elixir($file, $host = '')
+    {
+
+        if (env('APP_ENV') == 'local' || env('APP_ENV') == 'staging') {
             $in_host = "";
-        } else{
+        } else {
             $in_host = $host;
         }
 
-        return $in_host . elixir( $file );
+        return $in_host . elixir($file);
     }
+
 }
