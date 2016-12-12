@@ -25,6 +25,10 @@ class customElixir {
         if (env('APP_ENV') == 'local' || env('APP_ENV') == 'staging') {
             $in_host = "";
         } else {
+            if( $host == '' ){
+                $host = env('teja_host');
+            }
+
             $in_host = $host;
         }
 
