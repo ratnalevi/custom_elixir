@@ -26,7 +26,7 @@ class customElixir {
             $in_host = "";
         } else {
             if( $host == '' ){
-                $host = env('teja_host');
+                $host = env('TEJA_HOST');
             }
 
             $in_host = $host;
