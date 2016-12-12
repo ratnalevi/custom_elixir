@@ -1,9 +1,9 @@
 {
   "name": "allamlevi/custom_elixir",
   "description": "Wrapper on laravel's elixir function to get custom elixir urls",
-  "keywords": ["framework", "laravel"],
+  "keywords": ["library", "elixir"],
   "license": "MIT",
-  "type": "composer-plugin",
+  "type": "library",
   "authors": [
     {
       "name": "Allam Levi Ratnakar",
